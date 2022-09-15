@@ -1,0 +1,6 @@
+ UPDATE user SET fname="Sunita",lname="Theeng" WHERE user_id=2;    ##used to update data in database
+SELECT * FROM user;
+
+DELETE FROM user WHERE user_id=5;                                  ##used to delete data from database
+SELECT * FROM user;                                                ##->comment
+                                                                     *->all
