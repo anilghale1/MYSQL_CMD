@@ -1,0 +1,13 @@
+SELECT *FROM table_name;   //to select all data from table
+INSERT INTO `table_name` (`col_name1`,`1col_namen`) VALUES ("col_name1_value","col_namen_value");   //to insert data into table FOR single data
+
+//for multiple data insertion
+//here first data insertion operation and then select all data from user database and display
+
+INSERT INTO `user` (`fname`,`lname`,`email`,`password`,`address`) VALUES 
+("Anil","Ghale","ghaleanil20@gmail.com","hahhaha","lalitpur"),
+("Sudarsan","Kapali","sudarsan20@gmail.com","hahhaha","bhaktapur"),
+("Bikash","Chand","bikys@gmail.com","hahhaha","masaa"),
+("punuika","Gurung","gurungpunika@gmail.com","hahhaha","Chitwan");
+
+SELECT *FROM user;
