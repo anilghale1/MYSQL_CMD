@@ -1,0 +1,20 @@
+C:\Users\student3>cd ..                                  //locate current command prompt        cd-> change directory
+
+C:\Users>cd ..                                           // locate to previous folder
+
+C:\>cd C:\Program Files\MySQL\MySQL Server 8.0\bin        //locate  to bin folder of c drive
+
+mysql> show databases;                                // it shows databse 
+mysql> user schema_name;                                //get into schema
+musql> show tables;                              //show table
+mysql> Select * from table_name;                  //view all data
+mysql> CERATE DATABASES database_name;             // used to create database on cmd_prompt
+desc table_name;                                    // give all details of table
+
+
+  ** create table *
+    mysql> CREATE TABLE table_name ( columns1 to n);
+
+
+INSERT INTO `user` (`user_id`,`fname`,`lname`,`email`,`password`,`address`) VALUES     //for data insertion
+("5","Anil","Ghale","ghaleanil20@gmail.com","hahhaha","lalitpur");
