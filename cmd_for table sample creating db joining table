@@ -1,0 +1,22 @@
+
+** create database **
+CREATE DATABASE database_name
+
+** create table sample ** 
+ CREATE TABLE ordder(
+      id int not null auto_increment,
+      customer_id int not null,
+      product_id int not null,
+      foreign key(customer_id) references customer(id),     // foreign key indicate primary key of another table
+       foreign key(product_id) references product(id),
+ price DECIMAL(5,2),                                             // take decimal values of total 5 digit with point and 2 is after point digit
+       primary key(id)
+       );
+
+
+
+** inner join syntax **
+SELECT table_name.column_name(s)
+FROM table1
+INNER JOIN table2.column_name
+ON table1.column_name = table2.column_name;
