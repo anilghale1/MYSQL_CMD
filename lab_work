@@ -1,0 +1,53 @@
+##CREATE DATABASE inventory_dbs;
+use inventory_db;
+
+ CREATE TABLE customer
+ (
+    id int not null auto_increment,
+    name varchar(45) not null,
+    email varchar(50) not null,
+    address varchar(45),
+    primary key(id)
+    );
+    
+    CREATE TABLE product
+ (
+    id int not null auto_increment,
+    product_name varchar(45) not null,
+    price DECIMAL(5,2),
+    primary key(id)
+    );
+    
+    
+    INSERT INTO `customer` (`name`,`email`,`address`) VALUES
+    ("Gary_Vee","garyvee@gmail.com","USA"),
+    ("AMan_dhattarwal","dhattarwalaman@gmail","INdia"),
+    ("MArk_manson","mark@gmail.com","UK"),
+    ("ALakh_pandey","alakh@gmai.com","bharat"),
+    ("ANil_Ghale","ghalenial30@gmail.com","Nepal");
+    
+    
+    INSERT INTO `product` (`product_name`,`price`) VALUES  
+    ("Tuf_GAming","100.00"),
+     ("Ideapad_three","100.00"),
+      ("Hp","100.00");
+      
+      SELECT *FROM product;
+      
+      
+      CREATE TABLE ordder(
+      id int not null auto_increment,
+      customer_id int not null,
+      product_id int not null,
+      foreign key(customer_id) references customer(id),
+       foreign key(product_id) references product(id),
+       primary key(id)
+       );
+       
+       INSERT INTO ordder (`customer_id`,`product_id`) VALUES 
+       (1,4),(2,5),(3,6);
+       SELECT *FROM ordder;
+    
+    
+      SELECT customer.name, ordder.* from customer inner join ordder on customer.id=ordder.customer_id;
+    
